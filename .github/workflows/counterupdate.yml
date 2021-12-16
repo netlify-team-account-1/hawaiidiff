@@ -17,7 +17,7 @@ jobs:
           DDIFF=$(python -c "from datetime import date as d; print(abs((d.today() - d(2022, 9, 1)).days))")
           sed -i "s/DAY_COUNTER_VAR/$DDIFF/g" src/index.html
 
-      - name: Deploy to netlify
+      - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         with:
           args: deploy --prod --dir=src
