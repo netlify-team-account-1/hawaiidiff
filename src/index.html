@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="apple-touch-icon" sizes="152x152" href="/media/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicon-16x16.png">
-	<link rel="manifest" href="/media/site.webmanifest">
+
+	<meta charset="UTF-8">
+ <title>Hawaii Time Diff - The Ultimate Counter</title>
+	<link rel="apple-touch-icon" sizes="152x152" href="media/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+	<link rel="manifest" href="media/site.webmanifest">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
+
+	<style type="text/css">
+
+		body {
+			background-image: linear-gradient(to right, #bee1e6 , #fad2e1 , #cddafd);
+		}
+
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		@font-face {
+			font-family: 'PatuaOne';
+			src: url('fonts/PatuaOne-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		.countercontainer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.countercontent {
+			font-family: 'PatuaOne';
+			display: inline-block;
+			text-align: center;
+		}
+
+		.counter {
+			font-size: 6.5em;
+			margin: 0;
+		}
+	</style>
 </head>
 <body>
+	<div class="countercontainer">
+		<div class="countercontent">
+			<img src="media/android-chrome-144x144.png">
+			<h1>Hawaii Time Diff</h1>
 
-	<h1>My First Heading</h1>
+			<p class="counter">DAY_COUNTER_VAR</p>
 
-	<p>My first paragraph.</p>
-
+			<p>Open-source <a href="https://github.com/dend/hawaiidiff">on GitHub</a>.</p>
+		</div>
+	</div>
 </body>
 </html>
 
