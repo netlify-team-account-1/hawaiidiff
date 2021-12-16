@@ -1,0 +1,7 @@
+[functions]
+	included_files = ["src/*"]
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/builders/counter"
+  status = 200

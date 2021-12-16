@@ -1,0 +1,9 @@
+{
+  "name": "hawaii-odb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@netlify/functions": "^0.7.0"
+  }
+}
