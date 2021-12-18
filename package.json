@@ -1,9 +1,8 @@
 {
   "name": "hawaii-odb",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An example site showing the delta between current date and Hawaii all-hands.",
   "devDependencies": {
-    "@netlify/functions": "^0.7.0"
+    "@netlify/functions": "^0.10.0"
   }
 }
