@@ -24,10 +24,8 @@ const handler = async event => {
       "Content-Type": "text/html",
     },
     body: raw_data,
-    ttl: 1800
-  }
-
-};
-
+    ttl: 1800,
+  };
+}
 
 exports.handler = builder(handler);
