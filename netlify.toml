@@ -5,4 +5,3 @@
   from = "/*"
   to = "/.netlify/builders/counter"
   status = 200
-  force = true
