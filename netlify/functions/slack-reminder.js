@@ -1,13 +1,13 @@
 const { schedule } = require("@netlify/functions");
 const Axios = require("axios").default;
-const { timeUntilHawaii } = require("./counter/counter");
+const { minutesUntilHawaii } = require("./counter/counter");
 
-exports.handler = schedule("@daily", async () => {
+exports.handler = schedule("* * * * *", async () => {
   await Axios.post(
     "https://slack.com/api/chat.postMessage",
     {
       channel: "hawaiidiff-test",
-      text: `${timeUntilHawaii} days until Hawaii 🌺`,
+      text: `${minutesUntilHawaii} minutes until Hawaii 🌺`,
     },
     {
       headers: {
