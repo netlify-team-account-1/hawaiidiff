@@ -3,7 +3,8 @@ const fs = require("fs")
 const path = require("path")
 
 // See for date conversion: https://stackoverflow.com/a/15289883
-const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+const _MS_PER_MINUTE = 1000 * 60;
+const _MS_PER_DAY = _MS_PER_MINUTE * 60 * 24;
 function dateDiffInDays(a, b) {
   // Discard the time and time-zone information.
   const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
@@ -12,8 +13,18 @@ function dateDiffInDays(a, b) {
   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
 }
 
-const timeUntilHawaii = dateDiffInDays(new Date(), new Date("2022-09-01"));
+function dateDiffInMinutes(a, b) {
+  // Discard the time and time-zone information.
+  const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+  return Math.floor((utc2 - utc1) / _MS_PER_MINUTE);
+}
+
+const hawaiiDate = new Date("2022-09-01")
+const timeUntilHawaii = dateDiffInDays(new Date(), hawaiiDate);
 exports.timeUntilHawaii = timeUntilHawaii;
+exports.minutesUntilHawaii = dateDiffInMinutes(new Date(), hawaiiDate);
 
 const dayString = "DAY_COUNTER_VAR"
 const fileName = "./_index.html"
