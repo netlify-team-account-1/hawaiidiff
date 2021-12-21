@@ -12,10 +12,13 @@ function dateDiffInDays(a, b) {
   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
 }
 
+const timeUntilHawaii = dateDiffInDays(new Date(), new Date("2022-09-01"));
+exports.timeUntilHawaii = timeUntilHawaii;
+
 const dayString = "DAY_COUNTER_VAR"
 const fileName = "./_index.html"
 var raw_data = fs.readFileSync(require.resolve(fileName), "utf8").toString()
-raw_data = raw_data.replace(dayString, dateDiffInDays(new Date(), new Date("2022-09-01")))
+raw_data = raw_data.replace(dayString, timeUntilHawaii)
 
 const handler = async event => {
   return {

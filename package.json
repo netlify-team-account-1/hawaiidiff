@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An example site showing the delta between current date and Hawaii all-hands.",
   "devDependencies": {
-    "@netlify/functions": "^0.10.0"
+    "@netlify/functions": "^0.11.0-rc"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "netlify-cli": "^8.2.4"
   }
 }
