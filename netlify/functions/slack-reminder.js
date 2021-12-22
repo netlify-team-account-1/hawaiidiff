@@ -6,7 +6,7 @@ exports.handler = schedule("@daily", async () => {
   await Axios.post(
     "https://slack.com/api/chat.postMessage",
     {
-      channel: "hawaiidiff-test",
+      channel: "secret-hawaii-all-hands",
       text: `${timeUntilHawaii} days until Hawaii 🌺`,
     },
     {
